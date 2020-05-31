@@ -5,7 +5,7 @@
 ### Main
 
 ```
-git clone https://github.com/higexxp/dev-conf.git .dev-config
+git clone https://github.com/higexxp/dev-conf.git .dev-conf
 cd .dev-config
 sh install.sh
 ```
