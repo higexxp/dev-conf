@@ -1,3 +1,4 @@
+source $HOME/.dev-conf/p10k.zsh
 LS_COLORS="${LS_COLORS}:ow=01;34"; export LS_COLORS
 export DOCKER_HOST=tcp://localhost:2375
 export PATH=$HOME/.nodebrew/current/bin:$HOME/.local/bin:$PATH
