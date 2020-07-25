@@ -107,6 +107,7 @@
     # battery               # internal battery
     # wifi                  # wifi speed
     # example               # example user-defined segment (see prompt_example function below)
+		hoge
   )
 
   # Defines character set used by powerlevel10k. It's best to let `p10k configure` set it for you.
@@ -1574,8 +1575,14 @@
   #
   # Type `p10k help segment` for documentation and a more sophisticated example.
   function prompt_example() {
-    p10k segment -b 1 -f 3 -i '⭐' -t 'hello, %n'
+    p10k segment -b 1 -f 3 -i '⭐' -t "hello, %n"
   }
+	function prompt_hoge() {
+		if [ -f .firebaserc ]; then
+			fpro=`cat .firebaserc | awk '/.*projects.*{/,/}/' | grep -e ":.*\"" | sed -e 's/.*: \"\(.*\)\".*/\1/g'`
+    	p10k segment -b 'green' -f 3 -t $fpro
+		fi
+	}
 
   # User-defined prompt segments may optionally provide an instant_prompt_* function. Its job
   # is to generate the prompt segment for display in instant prompt. See

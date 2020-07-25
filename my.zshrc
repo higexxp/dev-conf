@@ -1,8 +1,8 @@
 source $HOME/.dev-conf/p10k.zsh
+[[ ! -f /usr/share/google-cloud-sdk/completion.zsh.inc ]] || source /usr/share/google-cloud-sdk/completion.zsh.inc
 LS_COLORS="${LS_COLORS}:ow=01;34"; export LS_COLORS
 export DOCKER_HOST=tcp://localhost:2375
 export PATH=$HOME/.nodebrew/current/bin:$HOME/.local/bin:$PATH
-
 
 # p10k configure
 export POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
@@ -40,4 +40,12 @@ zinit light paulirish/git-open
 
 # Gitの変更状態がわかる ls。ls の代わりにコマンド `k` を実行するだけ。
 zinit light supercrabtree/k
+
+
+chpwd() {
+    ls
+}
+
+alias tf="terraform"
+alias fb="firebase"
 
