@@ -1,7 +1,9 @@
 source $HOME/.dev-conf/p10k.zsh
 [[ ! -f /usr/share/google-cloud-sdk/completion.zsh.inc ]] || source /usr/share/google-cloud-sdk/completion.zsh.inc
 LS_COLORS="${LS_COLORS}:ow=01;34"; export LS_COLORS
-export DOCKER_HOST=tcp://localhost:2375
+if [[ "$OSTYPE" != "darwin"* ]]; then
+	export DOCKER_HOST=tcp://localhost:2375
+fi
 export PATH=$HOME/.nodebrew/current/bin:$HOME/.local/bin:$PATH
 
 # p10k configure
