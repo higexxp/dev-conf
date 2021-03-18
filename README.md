@@ -21,5 +21,6 @@ sh install.sh
 
 ## update
 
-* git pull
-
+* cd ~/.dev-conf && git pull
+* zinit self-update
+* zinit update
