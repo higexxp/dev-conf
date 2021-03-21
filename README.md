@@ -4,7 +4,8 @@
 
 ### pre-install
 
-* apt-get install zsh curl
+* apt-get install zsh curl gcc
+* touch ~/.zshrc
 * chsh -s /bin/zsh
 
 ### Main
