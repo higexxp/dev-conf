@@ -1,0 +1,46 @@
+install fisherman & oh-my-fish
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs git.io/fisher
+curl -L https://get.oh-my.fish | fish
+
+fisher install jethrokuan/z
+fisher install simnalamburt/shellder
+
+brew install peco
+
+# clone
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
+
+brew install exa
+
+# ~/.config/fish/config.fish
+alias e='exa --icons'
+alias l=e
+alias ls=e
+alias ea='exa -a --icons'
+alias la=ea
+alias ee='exa -aal --icons'
+alias ll=ee
+alias et='exa -T -L 3 -a -I "node_modules|.git|.cache" --icons'
+alias lt=et
+alias eta='exa -T -a -I "node_modules|.git|.cache" --color=always --icons | less -r'
+alias lta=eta
+
+https://github.com/craftzdog/dotfiles-public
+
+fisher install ilancosman/tide@v5
+
+brew install ghq
+
+git clone https://github.com/craftzdog/dotfiles-public.git
+
+fisher install oh-my-fish/plugin-peco
+
