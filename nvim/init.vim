@@ -28,3 +28,6 @@ call s:load('floaterm')
 let mapleader = "\<Space>"
 source $HOME/.config/nvim/test.vim
 
+let g:gh_token = '333cfd5c5db20bbcb50cd10975a3f0dc10ba180b'
+
+

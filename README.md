@@ -4,7 +4,8 @@
 
 ### pre-install
 
-* apt-get install zsh curl
+* apt-get install zsh curl gcc
+* touch ~/.zshrc
 * chsh -s /bin/zsh
 
 ### Main
@@ -21,5 +22,6 @@ sh install.sh
 
 ## update
 
-* git pull
-
+* cd ~/.dev-conf && git pull
+* zinit self-update
+* zinit update

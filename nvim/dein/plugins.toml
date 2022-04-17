@@ -22,3 +22,7 @@ repo = 'voldikss/vim-floaterm'
 [[plugins]]
 repo = 'liuchengxu/vim-which-key'
 
+# gh(github)
+[[plugins]]
+repo = 'skanehira/gh.vim'
+

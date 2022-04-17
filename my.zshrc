@@ -64,4 +64,5 @@ alias tf="terraform"
 alias fb="firebase"
 alias kc="kubectl"
 alias vi="nvim"
+alias dc="docker-compose"
 
