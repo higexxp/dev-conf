@@ -1,3 +1,5 @@
+"Sample ****
+"nnoremap <Leader>a :echo "Hello"<CR>
 
 " reset augroup
 augroup MyAutoCmd
@@ -19,10 +21,13 @@ function! s:load(file) abort
 endfunction
 
 call s:load('plugins')
+call s:load('which-key')
+call s:load('floaterm')
+
 
 let mapleader = "\<Space>"
+source $HOME/.config/nvim/test.vim
 
 let g:gh_token = '333cfd5c5db20bbcb50cd10975a3f0dc10ba180b'
 
-set number
 
