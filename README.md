@@ -19,3 +19,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 vscode font
 MesloLGS NF
+
+hogehoge
+
