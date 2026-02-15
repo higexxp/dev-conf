@@ -3,7 +3,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Inserts a blank line between shell prompts
-add_newline = true
+add_newline = false
 
 # 右側プロンプトに環境変数 HOGE を表示
 right_format = "$env_var_HOGE"
