@@ -32,12 +32,17 @@ return {
   -- Treesitter (構文解析)
   {
     "nvim-treesitter/nvim-treesitter",
+    lazy = false,
     build = ":TSUpdate",
     config = function()
-      require("nvim-treesitter.configs").setup {
-        highlight = { enable = true },
-        indent = { enable = true },
-      }
+      vim.api.nvim_create_autocmd("FileType", {
+        callback = function()
+          local ok = pcall(vim.treesitter.start)
+          if ok then
+            vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+          end
+        end,
+      })
     end,
   },
 }

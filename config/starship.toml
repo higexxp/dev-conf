@@ -6,20 +6,20 @@
 add_newline = false
 
 # 右側プロンプトに環境変数 HOGE を表示
-right_format = "${env_var.HOGE}${env_var.HOGE2}"
+right_format = "${env_var.CDK_ENV}-${env_var.CDK_ACCOUNT_ENV}"
 
 # Replace the '❯' symbol in the prompt with '➜'
 [character] # The name of the module we are configuring is 'character'
 success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
 
 # 環境変数 HOGE を表示（右側プロンプト用）
-[env_var.HOGE]
-variable = "HOGE"
-format = "[zz:$env_value]($style)"
+[env_var.CDK_ENV]
+variable = "CDK_ENV"
+format = "[CDK_ENV:$env_value]($style)"
 style = "bold yellow"
-[env_var.HOGE2]
-variable = "HOGE2"
-format = "[zz2:$env_value]($style)"
+[env_var.CDK_ACCOUNT_ENV]
+variable = "CDK_ACCOUNT_ENV"
+format = "[CDK_ACCOUNT_ENV:$env_value]($style)"
 style = "bold yellow"
 
 # Disable the package module, hiding it from the prompt completely
